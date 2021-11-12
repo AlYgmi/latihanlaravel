@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link {{ ($title === "gambar") ? 'active' : '' }}" aria-current="page" href="/gambar">Home</a>
+                <a class="nav-link" aria-current="page" href="/gambar">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link " href="/produk">Produk</a>
@@ -53,7 +53,7 @@
     <section class = "home-section">
         <div class="container">
         <div class="logo">
-            <img src="logosekolahpedia.png">
+            <img src="{{ asset('logosekolahpedia.png') }}" class="img-fluid">
         </div>
         
         <div>

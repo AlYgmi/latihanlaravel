@@ -13,13 +13,15 @@
         <div class="jobinfo">
           <div class="row">
             <div class="col-md-8">
-              <div class="companylogo"><img width="150px" src="{{ $gambar }}" alt="{{ $nama }}"></div>
-              <h2>{{ $nama }}</h2>
+              <div class="companylogo"><img width="150px" src="https://sekolahpedia.id/medias/logosekolah/SMKN 1 GEBANG.jpeg" alt=""></div>
+              <h2>SMKN 1 GEBANG</h2>
+              <div class="ptext">SMK</div>
+              <div class="salary">Cirebon</div>
             </div>
             <div class="col-md-4">
               <div class="companyinfo">
                 <div class="title"><a>Alamat</a></div>
-                <div class="ptext">{{ "$alamat, $desa, $kecamatan, $kota, $provinsi $kodepos" }}</div>
+                <div class="ptext">JL. RAYA GEBANG ILIR PERUM GEBANG PERMAI NO. 01, Gebang Ilir, Gebang, Cirebon, Prov. Jawa Barat, 45194</div>
                 <div class="clearfix"></div>
               </div>
             </div>
@@ -40,71 +42,68 @@
             <div class="contentbox">
               <h3>Identitas Satuan Pendidikan</h3>
               <br>
-              <div class="p">
               <table class="table table-striped table-detail">
                 <tbody><tr>
                   <th>Nama</th>
                   <td>:</td>
-                  <td>{{ $nama }}</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <th>NPSN</th>
                   <td>:</td>
-                  <td>{{ $npsn }}</td>
+                  <td>20253778</td>
                 </tr>
                 <tr>
                   <th>Alamat</th>
                   <td>:</td>
-                  <td>{{ $alamat }}</td>
+                  <td>JL. RAYA GEBANG ILIR PERUM GEBANG PERMAI NO. 01</td>
                 </tr>
                 <tr>
                   <th>Kode Pos</th>
                   <td>:</td>
-                  <td>{{ $kodepos }}</td>
+                  <td>45194</td>
                 </tr>
                 <tr>
                   <th>Desa/Kelurahan</th>
                   <td>:</td>
-                  <td>{{ $desa }}</td>
+                  <td>Gebang Ilir</td>
                 </tr>
                 <tr>
                   <th>Kecamatan/Kota (LN)</th>
                   <td>:</td>
-                  <td>{{ $kecamatan }}</td>
+                  <td>Gebang</td>
                 </tr>
                 <tr>
                   <th>Kab.-Kota/Negara (LN)</th>
                   <td>:</td>
-                  <td>{{ $kota }}</td>
+                  <td>Cirebon</td>
                 </tr>
                 <tr>
                   <th>Propinsi/Luar Negeri (LN)</th>
                   <td>:</td>
-                  <td>{{ $provinsi }}</td>
+                  <td>Prov. Jawa Barat</td>
                 </tr>
                 <tr>
                   <th>Status Sekolah</th>
                   <td>:</td>
-                  <td>{{ $status }}</td>
+                  <td>NEGERI</td>
                 </tr>
                 <tr>
                   <th>Waktu Penyelenggaraan</th>
                   <td>:</td>
-                  <td>{{ $waktu }}</td>
+                  <td>Sehari Penuh/5 hari</td>
                 </tr>
                 <tr>
                   <th>Jenjang Pendidikan</th>
                   <td>:</td>
-                  <td>{{ $jenjang }}</td>
+                  <td>SMK</td>
                 </tr>
               </tbody></table>
             </div>
           </div>
-          </div>
           <!-- Job Description end --> 
                   <div class="job-header">
             <div class="jobdetail">
-              <div class="text-center">
               <h3>Cek PPDB</h3>
                 <div id="AlertPPDB"></div>
                 <div class="form-group">
@@ -113,7 +112,6 @@
                 <button type="button" id="PPDBSubmit" class="btn btn-primary btn-block">Cek</button>
             </div>
           </div>
-                  </div>
                   <!-- Job Detail start -->
           <!-- <div class="job-header">
             <div class="jobdetail">
@@ -184,36 +182,34 @@
             <div class="contentbox">
               <h3>Kontak</h3>
               <br>
-              <div class="p">
               <table class="table table-striped table-detail" style="border:1px solid #ddd;margin-bottom: 10px">
                 <tbody><tr>
                   <th>Telepon</th>
                   <td>:</td>
-                  <td>{{ $telp }}</td>
+                  <td>-</td>
                 </tr>
                 <tr>
                   <th>Fax</th>
                   <td>:</td>
-                  <td>{{ $fax }}</td>
+                  <td>02318840267</td>
                 </tr>
                 <tr>
                   <th>Email</th>
                   <td>:</td>
-                  <td>{{ $email }}</td>
+                  <td>smkn1_gebang@yahoo.co.id</td>
                 </tr>
                 <tr>
                   <th>Website</th>
                   <td>:</td>
-                  <td>{{ $website }}</td>
+                  <td>http://smkn1-gebang.sch.id</td>
                 </tr>
                 <tr>
                   <th>Operator</th>
                   <td>:</td>
-                  <td>{{ $operator }}</td>
+                  <td>1</td>
                 </tr>
               </tbody></table>
             </div>
-          </div>
           </div>
           <!-- kontak end -->
         </div>
