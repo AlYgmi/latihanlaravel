@@ -28,9 +28,4 @@ Route::get('/sekolah/daftar', 'SekolahController@daftar');
 Route::get('/gambar','HomeController@index');
 
 
-Route::get('/produk', function ($id) {
-    return view('jual', [
-        "image" => "logosekolahpedia.png",
-        "title" => "jual"
-    ]);
-});
+Route::get('/produk','ProdukController@produk');
