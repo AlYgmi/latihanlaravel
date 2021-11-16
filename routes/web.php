@@ -28,4 +28,4 @@ Route::get('/sekolah/daftar', 'SekolahController@daftar');
 Route::get('/gambar','HomeController@index');
 
 
-Route::get('/produk','ProdukController@produk');
+Route::get('/produk/{id}', 'ProdukController@produk')->where('id', '[0-9]+');

@@ -21,6 +21,7 @@ class CreateProduksTable extends Migration
             $table->string('sekolah');
             $table->text('deskripsi');
             $table->integer('tlp');
+            $table->string('gambar');
             $table->timestamps();
         });
     }

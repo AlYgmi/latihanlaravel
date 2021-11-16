@@ -9,15 +9,18 @@ use Illuminate\Routing\Controller;
 
 class ProdukController extends Controller
 {
-    public function produk() {
-        $produk = Produk::all();
-        return view('jual',compact('produk'));
-    }
+    public function produk($id) {
+        $produk = Produk::find($id);
+        return view('produk.jual',compact('produk'));
+      } 
     public function create()
 {
     return view('blog.create');
-}
 
+}
+    public function show(Produk $produk) {
+        return view('produk.detail',compact('produk'));
+    }
 
 /**
 * store

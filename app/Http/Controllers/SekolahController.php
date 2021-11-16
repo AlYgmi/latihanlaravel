@@ -19,4 +19,8 @@ class SekolahController extends Controller
         $data = Sekolah::find($npsn);
         return view('sekolah', $data);
     }
+    function produk($id) {
+        $data = Sekolah::find($id);
+        return view('produk', $data);
+      }
 }
