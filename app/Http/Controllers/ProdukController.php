@@ -13,4 +13,17 @@ class ProdukController extends Controller
         $produk = Produk::all();
         return view('jual',compact('produk'));
     }
+    public function create()
+{
+    return view('blog.create');
+}
+
+
+/**
+* store
+*
+* @param  mixed $request
+* @return void
+*/
+
 }
