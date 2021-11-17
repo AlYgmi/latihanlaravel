@@ -9,11 +9,11 @@
 <div class="container">
 <div class="row">
   <div class="card" style="width: 18rem;">
-    <img src="{{ $produk[0]->gambar }}" class="card-img-top" alt="...">
+    <img src="images.jpeg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">{{ $nama }}</h5>
-      <p class="card-text">{{ $deskripsi }}      
-        <a href="{{ route('produk.show',$produk->id) }}" class="btn btn-primary">detail</a>
+      <h5 class="card-title">Pengganti botol plastik</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos officia quibusdam, quos facilis consequatur magni aperiam perferendis tempora consectetur, reiciendis fugiat id atque nam placeat odio inventore rem quisquam quidem?      
+        <a href="/detail" class="btn btn-primary">detail</a>
     </div>
   </div>
 </div>
