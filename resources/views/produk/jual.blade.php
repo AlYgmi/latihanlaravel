@@ -14,8 +14,11 @@
     <div class="card-body">
       <h5 class="card-title">Pengganti botol plastik</h5>
       <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos officia quibusdam, quos facilis consequatur magni aperiam perferendis tempora consectetur, reiciendis fugiat id atque nam placeat odio inventore rem quisquam quidem?      
+      </p>
+      <div class="text-center">
         <a href="/detail" class="btn btn-primary">detail</a>
     </div>
+  </div>
   </div>
 </div>
 </div>

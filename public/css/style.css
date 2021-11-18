@@ -16,8 +16,9 @@
 
 .pager {
     color: darkblue;
+    font-size: 50px;
+    font-family: bold;
 }
-
 .kec {
     color: brown;
 }

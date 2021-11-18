@@ -9,7 +9,7 @@
             <h2 class="title">Daftar Sekolah Seluruh Indonesia</h2>
             <p>
                  <span class="font-weight-bold font-weight-bolder">
-                    <span class="pager">34</span>
+                    <h1 class="pager">34</h1>
                     Provinsi
                 </span>
             <span class="font-weight-bold font-weight-bolder">

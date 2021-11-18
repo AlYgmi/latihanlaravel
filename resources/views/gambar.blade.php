@@ -27,10 +27,12 @@
 @endsection    
 
 @section('contrast')
+        <div class="pt-5 pb-5">
         <div class="text-center">
             <h1>
                 PPDB Online
             </h1>
+        </div>    
         </div>  
         <div class="container">
           <ul class="list-unstyled list-sekolah"                                                                 >
