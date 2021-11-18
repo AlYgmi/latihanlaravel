@@ -1,6 +1,9 @@
 @extends('layouts.main')
 
 @section('container')
+<div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.737779444483!2d107.57569391428724!3d-6.921917994998683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7fd19822a15%3A0xb4bce65879746fc!2sRumah%20Abu%20Nana%20Rohana!5e0!3m2!1sid!2sid!4v1637224368653!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
 
 
 @endsection    

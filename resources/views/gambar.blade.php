@@ -6,9 +6,9 @@
     
 
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-            <h2 class="title">Daftar Sekolah Seluruh Indonesia</h2>
+            <h2 class="title text-center">Daftar Sekolah Seluruh Indonesia</h2>
             <p>
-                 <span class="font-weight-bold font-weight-bolder">
+                 {{-- <span class="font-weight-bold font-weight-bolder">
                     <span class="pager">34</span>
                     Provinsi
                 </span>
@@ -19,7 +19,23 @@
            <span>
                <span class="kec">6675</span>
                Kecamatan
-           </span>
+           </span> --}}
+           <div
+          class="
+            d-flex
+            justify-content-center
+            flex-row
+            text-center
+            align-items-end
+          "
+        >
+          <h4>34</h4>
+          <span>Provinsi</span>
+          <h4>513</h4>
+          <span>kota</span>
+          <h4>6675</h4>
+          <span>Kecamatan</span>
+        </div>
         </p> 
 
         
