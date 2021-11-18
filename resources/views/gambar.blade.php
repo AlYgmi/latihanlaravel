@@ -37,7 +37,7 @@
             @foreach($gambar as $skl)
             <div class="text-center">
             <li data-toggle="tooltip" data-placement="top" title="{{ $skl->nama }}" data-original-title="SMAS PASUNDAN GARUT">
-              <a href="/sekolah/{{ $skl->npsn }}"><img width="100px" src="{{ $skl->gambar }}" class="img-fluid" alt="{{ $skl->nama }}"></a>
+              <a href="/sekolah/{{ $skl->npsn }}"><img width="30px" src="{{ $skl->gambar }}" class="img-fluid" alt="{{ $skl->nama }}"></a>
             </li>
             </div>
             @endforeach

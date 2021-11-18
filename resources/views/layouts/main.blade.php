@@ -53,7 +53,9 @@
     <section class = "home-section">
         <div class="container">
         <div class="logo">
+            <div class="mt">
             <img src="{{ asset('logosekolahpedia.png') }}" class="img-fluid">
+          </div>
         </div>
         
         <div>

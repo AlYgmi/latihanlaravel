@@ -7,15 +7,21 @@
 
 @section('contrast')
 
-     
+     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- Job Header start -->
+    <div class="container">
     <div class="job-header">
         <div class="jobinfo">
+          <div class="header-banner">
+          <div class="mt">
           <div class="row">
+            <span class="border border-5 mt-5 pb-3 pt-3">
             <div class="col-md-8">
               <div class="companylogo"><img width="150px" src="{{ $gambar }}" alt="{{ $nama }}"></div>
               <h2>{{ $nama }}</h2>
             </div>
+          
+          
             <div class="col-md-4">
               <div class="companyinfo">
                 <div class="title"><a>Alamat</a></div>
@@ -24,7 +30,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </span>
+          </div>
+          </div>
       </div>
       <!-- Job Detail start -->
       <div class="row">
@@ -36,6 +44,7 @@
   
         <div class="col-md-7">
           <!-- Job Description start -->
+          <div class="mt">
           <div class="job-header">
             <div class="contentbox">
               <h3>Identitas Satuan Pendidikan</h3>
@@ -101,6 +110,7 @@
             </div>
           </div>
           </div>
+          </div>
           <!-- Job Description end --> 
                   <div class="job-header">
             <div class="jobdetail">
@@ -163,14 +173,18 @@
             </div>
           </div> -->
         </div>
+        
         <div class="col-md-5">
+          <div class="mt-5">
                   <div class="job-header">
             <div class="jobdetail">
               <a href="https://sekolahpedia.id/ppdb/25479" class="btn btn-lg btn-block btn-primary" style="border-radius: 0"><i class="fa fa-edit"></i> Pendaftaran Online</a>
             </div>
           </div>
+          </div>
                   <!-- Job Description end --> 
           <div class="job-header">
+            <div class="mt-5">
             <div class="jobdetail">
               <h3>Kepala Sekolah</h3>
               <div class="kepsek">
@@ -178,6 +192,7 @@
                 <h3></h3>
               </div>
             </div>
+          </div>
           </div>
           <!-- kontak -->
           <div class="job-header">
@@ -219,5 +234,5 @@
         </div>
         
       </div>
-    
+    </div>
 @endsection
