@@ -33,10 +33,10 @@
                   Instansi
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/sd">SD/MI</a></li>
-                  <li><a class="dropdown-item" href="/smp">SMP/MTs</a></li>
-                  <li><a class="dropdown-item" href="/sma">SMA/MA</a></li>
-                  <li><a class="dropdown-item" href="/smk">SMK/MAK</a></li>
+                  <li><a class="dropdown-item" href="/daftar">SD/MI</a></li>
+                  <li><a class="dropdown-item" href="/daftar">SMP/MTs</a></li>
+                  <li><a class="dropdown-item" href="/daftar">SMA/MA</a></li>
+                  <li><a class="dropdown-item" href="/daftar">SMK/MAK</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#"></a></li>
                 </ul>

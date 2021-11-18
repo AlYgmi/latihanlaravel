@@ -4,8 +4,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://sekolahpedia.id/template/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Situs Pencarian Sekolah Terbaik di Indonesia | Sekolahpedia </title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -14,7 +15,7 @@
 <body>
    
     <nav class="navbar navbar-light bg-primary" >
-        <img src="logosekolahpedia (1).png" width="200px" height="60px">
+        <img src="logosekolahpedia.png" width="200px" height="60px">
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
               Dropdown button

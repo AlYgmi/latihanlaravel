@@ -31,3 +31,5 @@ Route::get('/gambar','HomeController@index');
 // Route::get('/produk/{id}', 'ProdukController@produk')->where('id', '[0-9]+');
 Route::get('/produk','ProdukController@produk');
 Route::get('/detail','ProdukController@show');
+
+Route::get('/daftar', 'DaftarController@detil');
