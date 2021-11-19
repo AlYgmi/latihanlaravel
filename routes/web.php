@@ -33,3 +33,5 @@ Route::get('/produk','ProdukController@produk');
 Route::get('/detail','ProdukController@show');
 
 Route::get('/daftar', 'DaftarController@detil');
+
+route::get('/search', 'SearchController@index')->name('search');
