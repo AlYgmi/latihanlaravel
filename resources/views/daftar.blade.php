@@ -15,7 +15,9 @@
 <body>
    
     <nav class="navbar navbar-light bg-primary" >
+      <a href="/gambar">
         <img src="logosekolahpedia.png" width="200px" height="60px">
+      </a>  
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
               Dropdown button
