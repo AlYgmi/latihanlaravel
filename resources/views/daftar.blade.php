@@ -18,7 +18,7 @@
       <a href="/gambar">
         <img src="logosekolahpedia.png" width="200px" height="60px">
       </a>  
-        <div class="dropdown">
+        {{-- <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
               Dropdown button
             </button>
@@ -27,7 +27,7 @@
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </div>
+          </div> --}}
         <form class="form-inline"></form>
         <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px">

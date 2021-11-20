@@ -29,11 +29,11 @@
             align-items-end
           "
         >
-          <h4>34</h4>
+          <h4 class="pager">34</h4>
           <span>Provinsi</span>
-          <h4>513</h4>
+          <h4 class="text-page">513</h4>
           <span>kota</span>
-          <h4>6675</h4>
+          <h4 class="kec">6675</h4>
           <span>Kecamatan</span>
         </div>
         </p> 
@@ -46,7 +46,8 @@
         <div class="pt-5 pb-5">
         <div class="text-center">
             <h1>
-                PPDB Online
+                PPDB 
+                <span class="on"> Online</span>
             </h1>
         </div>    
         </div>  
