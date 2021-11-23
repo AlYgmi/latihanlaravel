@@ -13,18 +13,18 @@
 .text-page {
     color: chartreuse;
     font-size: 35px;
-    font-family: bold;
+    /* font-family: bold; */
 }
 
 .pager {
     color: darkblue;
     font-size: 35px;
-    font-family: bold;
+    /* font-family: bold; */
 }
 .kec {
     color: brown;
     font-size: 35px;
-    font-family: bold;
+    /* font-family: bold; */
 }
 
 .list-sekolah {
@@ -59,4 +59,11 @@
 }
 .on {
     color: blue;
+}
+.aa {
+    background-color: gray;
+}
+.cri {
+    width: 50px;
+    height: 50px;
 }
