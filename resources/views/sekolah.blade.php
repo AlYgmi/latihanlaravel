@@ -115,15 +115,19 @@
           </div>
           </div>
           <!-- Job Description end --> 
-                  <div class="job-header">
-            <div class="jobdetail">
-              <div class="text-center">
-              <h3>Cek PPDB</h3>
-                <div id="AlertPPDB"></div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="noppdb" id="NoPPDB" placeholder="Masukkan No PPDB Anda">
+      <div class="job-header">
+        <div class="jobdetail">
+          <div class="border border-5">
+            <div class="container">
+              <div class="text-center mb-3 mt-3">
+                <h3>Cek PPDB</h3>
+                  <div id="AlertPPDB"></div>
+                        <div class="form-group">
+                      <input type="text" class="form-control" name="noppdb" id="NoPPDB" placeholder="Masukkan No PPDB Anda">
+                    </div>
+                  <button type="button" id="PPDBSubmit" class="btn btn-primary btn-block">Cek</button>
                 </div>
-                <button type="button" id="PPDBSubmit" class="btn btn-primary btn-block">Cek</button>
+              </div>
             </div>
           </div>
                   </div>
@@ -191,8 +195,10 @@
             <div class="jobdetail">
               <h3>Kepala Sekolah</h3>
               <div class="kepsek">
+                <div class="border border-3">
                 <img src="https://sekolahpedia.id/template/images/logodefault.jpg">
                 <h3></h3>
+              </div>
               </div>
             </div>
           </div>
@@ -200,6 +206,7 @@
           <!-- kontak -->
           <div class="job-header">
             <div class="contentbox">
+              <div class="mb-3"></div>
               <h3>Kontak</h3>
               <br>
               <div class="p">

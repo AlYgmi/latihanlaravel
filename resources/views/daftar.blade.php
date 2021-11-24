@@ -38,7 +38,9 @@
         
     </nav>
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2800.8261610124573!2d107.54011166400105!3d-6.894629353954426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbitc%20baros!5e0!3m2!1sid!2sid!4v1637127970922!5m2!1sid!2sid" width="1295" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="container-fluid"></iframe>
-
+        <div class="h1" style="text-indent: 10%;
+        white-space: nowrap;
+        overflow: hidden;">Berikut adalah jumlah daftar sekolah berdasarkan provinsi</div>
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -50,7 +52,9 @@
           <div class="carousel-item active">
             <div class="row">
               <div class="col-4">
-            <div class="card rounded-circle cri" style="height: 200px; width: 200px; background-color:blue;"><div class="text-center" style="margin-top: 60px; font-size: 60px; font-family: arial; font-weight: bold; color: #fff;">187</div></div>
+            <div class="card rounded-circle cri" style="height: 200px; width: 200px; background-color:blue;">
+              <div class="text-center" style="margin-top: 60px; font-size: 60px; font-family: arial; font-weight: bold; color: #fff;">187</div>
+            </div>
           </div>
           <div class="col-4">
 
@@ -73,6 +77,24 @@
       </div>
       </div>
     </div>
+      </div>
+      <div class="sectionbaru">
+        <div class="header">
+          <div class="container text-center">
+            <h3>Berita
+              <span>Terbaru</span>
+            </h3>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="row">
+              <div class="col-md-5">
+                <img src="https://sekolahpedia.id/medias/artikel/5kxnv.jpg" alt="SMA PASUNDAN 3 KOTA BANDUNG RAIH JUARA 1 LOMBA KARYA TULIS ILMIAH (LKTI) 2021 TINGKAT SMA/SEDERAJAT SE-JAWA BARAT">
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
