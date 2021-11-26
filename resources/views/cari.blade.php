@@ -9,7 +9,7 @@
         <div class="text-center">
             <h3 style="font-family: arial; font-weight: bold;">Hasil pencarian</h3>
         </div>
-        <form method="post" action="http://localhost/laravel/findsearch">				
+        <form method="get" action="/findsearch">				
             <input type="text" name= "search">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <button>Search Now</button>				

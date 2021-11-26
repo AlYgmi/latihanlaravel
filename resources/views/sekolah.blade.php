@@ -250,8 +250,9 @@
 @section('track')
   <div class="text-center">
     <div class="news">
-      <div class="mt-4">
-        <h3>Berita <span style="color: blue;">Terbaru</span></h3>
+      <div>
+        <h3 class="mt">Berita <span style="color: blue;">Terbaru</span></h3>
+        <span class="mt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, laborum!</span>
       </div>  
     </div>
   </div>

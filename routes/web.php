@@ -34,7 +34,8 @@ Route::get('/detail','ProdukController@show');
 
 Route::get('/daftar', 'DaftarController@detil');
 
-Route::get('/search', 'SearchController@find')->name('search');
+Route::get('/search', 'SearchController@cari')->name('search');
+Route::get('/search', 'SearchController@index');
 
 Route::get('/find', 'SearchController@find');
-Route::post('/findSearch', 'SearchController@findSearch');
+Route::get('/findSearch', 'SearchController@findSearch');
