@@ -47,8 +47,9 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form> --}}
-            <form action="{{ route('search') }}" method="GET">
+            <form action="{{ route('search') }}" method="GET" action="http://localhost/laravel/findSearch">
               <input type="search" name="search">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <button class="btn btn-outline-success" type="submit">search</button>
              </form>
           </div>
@@ -69,6 +70,9 @@
         <div class="texter">
           @yield('contrast')
 
+      </div>
+      <div class="news">
+          @yield('track')
       </div>
     
 

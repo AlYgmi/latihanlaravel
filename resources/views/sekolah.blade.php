@@ -246,3 +246,13 @@
       </div>
     </div>
 @endsection
+
+@section('track')
+  <div class="text-center">
+    <div class="news">
+      <div class="mt-4">
+        <h3>Berita <span style="color: blue;">Terbaru</span></h3>
+      </div>  
+    </div>
+  </div>
+@endsection
