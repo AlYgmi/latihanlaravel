@@ -9,7 +9,7 @@
     <title>Situs Pencarian Sekolah Terbaik di Indonesia | Sekolahpedia </title>
     
 </head>
-<body>
+<body class="m-0 p-0">
 
   
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -47,9 +47,9 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form> --}}
-            <form action="{{ route('search') }}" method="GET" action="http://localhost/laravel/findSearch">
-              <input type="search" name="search">
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <form action="/sekolah/cari" method="GET">
+              <input type="text" name="cari" placeholder="Cari Sekolah .." value="{{ old('cari') }}">
+              {{-- <input type="submit" value="CARI"> --}}
               <button class="btn btn-outline-success" type="submit">search</button>
              </form>
           </div>

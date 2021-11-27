@@ -7,35 +7,56 @@
 @section('contrast')
     <div class="container">
         <div class="text-center">
-            <h3 style="font-family: arial; font-weight: bold;">Hasil pencarian</h3>
+            <h3 class="mt-5" style="font-family: arial; font-weight: bold;">Hasil pencarian</h3>
         </div>
-        <form method="get" action="/findsearch">				
-            <input type="text" name= "search">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <button>Search Now</button>				
-            </form>
-            <?php
-            if(isset($sekolah)){
-                
-                ?>
-                 <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($sekolah as $user)
-                        <tr>
-                            <td>{{$user->nama}}</td>
-                            <td>{{$user->email}}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                <?php
+        <style type="text/css">
+            .pagination li{
+                float: left;
+                list-style-type: none;
+                margin:5px;
             }
-            ?>
+        </style>
+     
+        <h3>Data Sekolah</h3>
+     
+     
+        <p>Cari Data Sekolah :</p>
+        <form action="/sekolah/cari" method="GET">
+            <input type="text" name="cari" placeholder="Cari Sekolah .." value="{{ old('cari') }}">
+            <input type="submit" value="CARI">
+        </form>
+            
+        <br/>
+     <div class="container-fluid">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>Nama Sekolah</th>
+                <th class="w-50">Alamat</th>
+                <th>No Telp</th>
+                <th>Email</th>
+                <th>Website</th>
+                <th>Fax</th>
+            </tr>
+            @forelse($sekolah as $p)
+            <tr>
+                <td>{{ $p->nama ? $p->nama : 'nama hosting' }}</td>
+                <td>{{ $p->alamat }}</td>
+                <td>{{ $p->telp }}</td>
+                <td>{{ $p->email }}</td>
+                <td>{{ $p->website }}</td>
+                <td>{{ $p->fax }}</td>
+            </tr>
+            @empty
+                <h3>Tidak ditemukan</h3>
+            @endforelse
+        </table>
+     
+        <br/>
+        Halaman : {{ $sekolah->currentPage() }} <br/>
+        Jumlah Data : {{ $sekolah->total() }} <br/>
+        Data Per Halaman : {{ $sekolah->perPage() }} <br/>
+    </div>
+     
+        {{ $sekolah->links() }}
     </div>
 @endsection
