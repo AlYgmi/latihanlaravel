@@ -7,9 +7,16 @@
     <link rel="shortcut icon" href="https://sekolahpedia.id/template/images/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Situs Pencarian Sekolah Terbaik di Indonesia | Sekolahpedia </title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+    </style>
     
 </head>
-<body class="m-0 p-0">
+<body>
 
   
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">

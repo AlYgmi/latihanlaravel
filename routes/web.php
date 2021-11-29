@@ -22,7 +22,7 @@ Route::get('/sekolah/20227447',function(){
     return view('sekolah');
 });
 
-Route::get('/sekolah/{npsn}', 'SekolahController@npsn')->where('npsn', '[0-9]+');
+Route::get('/sekolah/{npsn}', 'SekolahController@npsn')->where('npsn', '[0-9]+')->name('sekolah');
 Route::get('/sekolah/daftar', 'SekolahController@daftar');
 
 Route::get('/gambar','HomeController@index');

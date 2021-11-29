@@ -33,18 +33,14 @@
                 <th>Nama Sekolah</th>
                 <th class="w-50">Alamat</th>
                 <th>No Telp</th>
-                <th>Email</th>
-                <th>Website</th>
-                <th>Fax</th>
+                <th>Detail</th>
             </tr>
             @forelse($sekolah as $p)
             <tr>
                 <td>{{ $p->nama ? $p->nama : 'nama hosting' }}</td>
                 <td>{{ $p->alamat }}</td>
                 <td>{{ $p->telp }}</td>
-                <td>{{ $p->email }}</td>
-                <td>{{ $p->website }}</td>
-                <td>{{ $p->fax }}</td>
+                <td><a href="{{ route('sekolah', ['npsn' => $p->npsn]) }}">lihat</a></td>
             </tr>
             @empty
                 <h3>Tidak ditemukan</h3>
