@@ -36,3 +36,5 @@ Route::get('/daftar', 'DaftarController@detil');
 
 Route::get('/sekolah','SearchController@index');
 Route::get('/sekolah/cari','SearchController@cari');
+
+Route::get('/news','BeritaController@index');

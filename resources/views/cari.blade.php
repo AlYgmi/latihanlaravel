@@ -7,7 +7,7 @@
 @section('contrast')
     <div class="container">
         <div class="text-center">
-            <h3 class="mt-5" style="font-family: arial; font-weight: bold;">Hasil pencarian</h3>
+            <h3 class="mb-5" style="font-family: arial; font-weight: bold;">Hasil pencarian</h3>
         </div>
         <style type="text/css">
             .pagination li{
@@ -25,7 +25,6 @@
             <input type="text" name="cari" placeholder="Cari Sekolah .." value="{{ old('cari') }}">
             <input type="submit" value="CARI">
         </form>
-            
         <br/>
      <div class="container-fluid">
         <table class="table table-striped table-hover">
