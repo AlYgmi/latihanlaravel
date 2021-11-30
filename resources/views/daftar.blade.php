@@ -96,7 +96,22 @@
                </div>
             </div>
         </div>
-        <div class="section-bawah" style="background-color: cadetblue;"></div>
+        <div class="section-bawah" style="background-color: cadetblue;">
+          <div class="mt-4 text-center" style="font-family: arial; font-weight: bold;">
+            <h3>Berita <span style="color: blue;">Terbaru</span></h3>
+          </div>
+          <div class="container">
+          <div class="mt">
+            <div class="border">
+              <div class="row">
+                <div class="col-md-5">
+                  <img src="https://sekolahpedia.id/medias/artikel/5kxnv.jpg" width="450px" height="430px">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>

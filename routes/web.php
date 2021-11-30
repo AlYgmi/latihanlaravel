@@ -13,14 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', 'SekolahController@npsn')->where('npsn', '[0-9]+')->name('sekolah');
 
 
-Route::get('/sekolah/20227447',function(){
-    return view('sekolah');
-});
+Route::get('/','SekolahController@index');
 
 Route::get('/sekolah/{npsn}', 'SekolahController@npsn')->where('npsn', '[0-9]+')->name('sekolah');
 Route::get('/sekolah/daftar', 'SekolahController@daftar');

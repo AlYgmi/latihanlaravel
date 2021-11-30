@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Sekolah;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class SekolahController extends Controller
 {
+    function index() {
+        $data = Sekolah::all();
+        return view('index', ['gambar' => $data]);
+      }
     function daftar() {
         $data = Sekolah::toBase()->get('npsn');
         $anu = 'aaa';
@@ -17,7 +22,7 @@ class SekolahController extends Controller
     }
     function npsn($npsn) {
         $data = Sekolah::find($npsn);
-        return view('sekolah', $data);
+        return view('index', $data);
     }
     function produk($id) {
         $data = Sekolah::find($id);
