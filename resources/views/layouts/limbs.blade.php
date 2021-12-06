@@ -12,12 +12,12 @@
 
 <!-- Custom js --> 
 <script src="{{ asset('js/script.js') }}"></script>
-{literal}
+
 <script type="text/javascript">
   var options = {
 
     url: function(phrase) {
-      return "{/literal}{$fulldomain}/ajax/kota/?keyword={literal}"+phrase;
+      return "/ajax/kota/"+phrase;
     },
 
     getValue: function(element) {
@@ -28,14 +28,9 @@
       onChooseEvent: function(){
         valguruid   = $(".easy-autocomplete-container ul li.selected a.guruselect").attr("data-code");
         $("#KodeKota").val(valguruid);
-        {/literal}
-        {if $kanal eq 'school'}
-        {literal}
         $(".mapscontent").remove();
-        $("#maps").load( "{/literal}{$fulldomain}/maps/{$aksi}{literal}?KodeKota="+valguruid);
-        {/literal}
-        {/if}
-        {literal}
+        $("#maps").load( "/maps);
+        
       }
     },
     
@@ -80,10 +75,8 @@
   }
   $('.fancybox').fancybox();
 </script>
-{/literal}
-<script type="text/javascript" src="{$lokasitemplate}/js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="{$lokasitemplate}/js/datetimepicker/bootstrap-datetimepicker.id.js" charset="UTF-8"></script>
-{literal}
+<script type="text/javascript" src="{{ asset('js/datetimepicker/bootstrap-datetimepicker.js') }}" charset="UTF-8"></script>
+<script type="text/javascript" src="{{ asset('js/datetimepicker/bootstrap-datetimepicker.id.js') }}" charset="UTF-8"></script>
 <script type="text/javascript">
  $('.form_date').datetimepicker({
   language:  'id',
@@ -115,7 +108,7 @@ $("#ChoosePropinsi li").click(function(){
   var valkodeprop = $(this).attr("data-id");
   $.ajax({
     type:'GET',
-    url: '{/literal}{$fulldomain}/ajax/kotasearch{literal}',
+    url: '/ajax/kotasearch',
     data: {"kodepropinsi": valkodeprop},
     cache : false,
     success : function(datasearchkota){
@@ -140,17 +133,10 @@ $(document).on('click','#ChooseKota li',function(){
   $(".listkota").html("");
   $(".searchpropcontent").hide();
   $(".overlay").remove();
-  {/literal}
-  {if $kanal eq 'school'}
-  {literal}
   $(".mapscontent").remove();
-  $("#maps").load( "{/literal}{$fulldomain}/maps/{$aksi}{literal}?KodeKota="+valkodekota);
-  {/literal}
-  {/if}
-  {literal}
-});
+  $("#maps").load( "/maps);
+  });
 
 var heightcat = $(".categorylist").innerHeight();
 $(".categorylist>li ul").css("height",heightcat);
 </script>
-{/literal}
