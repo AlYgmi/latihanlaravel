@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('head.html')
+@include('layouts.head')
 <link href="{{ asset('/masonry/masonry-gallery.css') }}" rel="stylesheet" type="text/css" />
 <style>
   .float{
@@ -69,15 +69,15 @@
   }
 </style>
 <body>
-@include('header.html')
+@include('layouts.header')
 <!-- Page Title start -->
 <div class="pageTitle pageDetail">
   <div class="mapsdetail">
-    {$gmaps}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2800.8261610124573!2d107.54011166400105!3d-6.894629353954426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbitc%20baros!5e0!3m2!1sid!2sid!4v1637127970922!5m2!1sid!2sid" width="1295" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="container-fluid"></iframe>
   </div>
 </div>
-@foreach(from=$data_detail key=id_detail item=a)
-@if($tlp)
+@foreach($data_detail as $a)
+@if($tlp != '')
 <a href="https://api.whatsapp.com/send?phone={$tlp}&text=Mohon%20Informasi%20Mengenai%20Penerimaan%20Siswa%20Baru." class="float" target="_blank">
     <img src="/template/images/ppdb-op.jpg"/>
 </a>
@@ -90,9 +90,9 @@
       <div class="jobinfo">
         <div class="row">
           <div class="col-md-8">
-            <div class="companylogo"><img src="{{ $logosekolah }}" alt=""></div>
+            <div class="companylogo"><img src="{$logosekolah}" alt=""></div>
             <h2>{{ $nama }}</h2>
-            <div class="ptext">{{ $jenjang }}</div>
+            <div class="ptext">{{ $sekolah->jenjang }}</div>
             <div class="salary">{{ $kota }}</div>
           </div>
           <div class="col-md-4">
@@ -110,28 +110,28 @@
     
       <!-- Carousel Berita -->
       <div class="col-md-12">        
-            @if($jml_berita gt '0')
-            <div class="listpgWraper listhome" {if $jml_produkhome eq '0' and $jml_gallery eq '0'}style="margin-top: -100px;"{/if}>
+            @if($jml_berita == '0')
+            <div class="listpgWraper listhome">
                 
                 <div class="blogWraper">
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                       
                       <div class="carousel-inner">
-                        @foreach(from=$data_berita key=id_berita item=b)
-                          <div class="item {if $b@iteration <= 1} active {/if}">
+                        @foreach($data_berita as $b)
+                          <div class="item">
                             <div class="row">
                                 <div class="thumbnail adjust1">
                                   
                                   <div class="col-md-6 col-sm-6 col-xs-12"> 
-                                      <img class="media-object img-responsive" src="{$b.gambar}" alt="{$b.judul}"> 
+                                      <img class="media-object img-responsive" src="{{ $b(['author','gambar','alias']) }}" alt=""> 
                                   </div>
           
                                   <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="caption">
-                                      <h4><a href="/berita/detail/">A</a></h4>
-                                      <div class="postmeta">Author : <span>{{ $author }}</span> Dari : <span>{{ $nama }}</span></div>
-                                     <p>{{ $isis }}...</p>
-                                      <a href="/berita/detail" class="readmore">Selengkapnya</a>
+                                      <h4><a href="/berita/detail/">kajsdhkahecn</a></h4>
+                                      <div class="postmeta">Author : <span>{{ $author }}</span> Dari : <span>{{ $alias }}</span></div>
+                                     <p>{$b.isis}...</p>
+                                      <a href="/berita/detail/" class="readmore">Selengkapnya</a>
                                     </div>
                                   </div>
           
@@ -140,13 +140,13 @@
                           </div>
                         @endforeach
                       </div>
-                      @if($data_berita | count > 1)
+                      @if($data_berita == 1)
                       <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><i class="fa fa-chevron-left"></i> </a>
                       <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <i class="fa fa-chevron-right"></i> </a>
                       @endif
                     </div>
                     
-                    <a href="/berita" class="btn btn-primary my-float">Lihat Semua Berita</a>
+                    <a href="/berita/" class="btn btn-primary my-float">Lihat Semua Berita</a>
                 </div>
             </div>
             @endif
@@ -231,7 +231,7 @@
           </div>
         </div>
         @endif
-	<!-- Job Detail start -->
+        <!-- Job Detail start -->
         <!-- <div class="job-header">
           <div class="jobdetail">
             <h3>Dokumen dan Perijinan</h3>
@@ -281,10 +281,10 @@
         </div> -->
       </div>
       <div class="col-md-5">
-        @if($statusmember eq '1' AND $statusppdb eq 1)
+        @if($statusmember == 1 && $statusppdb == 1)
         <div class="job-header">
           <div class="jobdetail">
-            <a href="/ppdb" class="btn btn-lg btn-block btn-primary" style="border-radius: 0"><i class="fa fa-edit"></i> Pendaftaran Online</a>
+            <a href="/ppdb/" class="btn btn-lg btn-block btn-primary" style="border-radius: 0"><i class="fa fa-edit"></i> Pendaftaran Online</a>
           </div>
         </div>
         @endif
@@ -293,8 +293,8 @@
           <div class="jobdetail">
             <h3>Kepala Sekolah</h3>
             <div class="kepsek">
-              <img src="{{ $fotokepsek }}">
-              <h3>{{ $namakepsek }}</h3>
+              <img src="balabala.jpeg">
+              <h3>Adit</h3>
             </div>
           </div>
         </div>
@@ -338,8 +338,8 @@
     </div>
   </div>
 </div>
-@if($statusmember eq '1')
-@if($jml_gallery gt '0')
+@if($statusmember == 1)
+@if($jml_gallery == 0)
 <section class="section" style="padding-top: 0;margin-top: 100px;">
   <div class="container">
     <div class="titleTop">
@@ -349,23 +349,23 @@
       <div class="col-md-12">
         <div class="portfolioFilter">
           <a href="#" data-filter="*" class="current">All</a>
-        @foreach(from=$data_kat_gallery key=id item=k)
-          <a href="#" data-filter=".{$k.id}">{$k.nama}</a>
+        @foreach($data_kat_gallery as $k)
+          <a href="#">{{ $nama }}</a>
         @endforeach
         </div>
       </div>
     </div>
     <div class="row">
       <div id="gallery-content-center" class="gallerylist os-animation">
-      @foreach(from=$data_gallery key=idgallery item=r)
-      <div class="ct-photoGallery-item col-md-3 {$r.idkategori}">
-        <a href="{$r.gambar}" title="{$r.title}" class="fancybox" data-fancybox-group="gallery">
+      @foreach($data_gallery as $r)
+      <div class="ct-photoGallery-item col-md-3">
+        <a href="" title="" class="fancybox" data-fancybox-group="gallery">
           <div class="ct-galleryTitle">
             <i class="fa fa-search-plus"></i>
           </div>
-          <img src="{$r.gambar}" alt="{$r.title}">
+          <img src="" alt="">
         </a>
-        <h3 class="content-title">{$r.title}</h3>
+        <h3 class="content-title">{{ $title }}</h3>
       </div>
       @endforeach
       </div>
@@ -373,29 +373,29 @@
   </div>
 </section>
 @endif
-@if($jml_produkhome gt '0')
+@if($jml_produkhome == '0')
 <!-- Featured Jobs start -->
-<section class="section {if $jml_gallery eq '0'}style='margin-top: -100px;' {/if}">
+<section class="section">
   <div class="container"> 
     <!-- title start -->
     <div class="titleTop">
       <h3>Produk <span>Kami</span></h3>
-      <a href="/produk/" class="catlink">Lihat Semua Produk</a>
+      <a href="/produk" class="catlink">Lihat Semua Produk</a>
     </div>
     <!-- title end --> 
     <div class="produkhome">
       <!--Featured Job start-->
       <ul class="jobslist row">
-        @foreach(from=$data_produkhome key=id_produkhome item=p)
+        @foreach($data_produkhome as $p)
         <!--Job start-->
         <li class="col-md-6">
           <div class="jobint">
             <div class="row">
-              <div class="col-md-2 col-sm-2"><img src="{$p.gambar}" alt="{$p.namaproduk}" /></div>
+              <div class="col-md-2 col-sm-2"><img src="" alt="" /></div>
               <div class="col-md-7 col-sm-7">
-                <h4><a href="/produk/detail">balada</a></h4>
-                <div class="company"><a href="/detail">{{ $nama }}</a></div>
-                <div class="jobloc"><label class="fulltime">makanan</label></div>
+                <h4><a href="/produk/detail">apapun itu</a></h4>
+                <div class="company"><a href="/detail/{{ $npsn }}">{{ $nama }}</a></div>
+                <div class="jobloc"><label class="fulltime">{$p.namakategori}</label></div>
               </div>
               <div class="col-md-3 col-sm-3">
                 <div class="price">Rp. 400.000</div>
@@ -414,10 +414,10 @@
 @endif
 @endforeach
 
-@include('footer.html')
-@include('libs.html')
-<script type="text/javascript" src="{$lokasitemplate}/masonry/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="{$lokasitemplate}/masonry/masonry-gallery.js"></script>
+@include('layouts.footer')
+@include('layouts.limbs')
+<script type="text/javascript" src="{{ asset('masonry/jquery.isotope.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('masonry/masonry-gallery.js') }}"></script>
 <script>
   $(document).on("click","#PPDBSubmit",function(){
     var noppdb = $("#NoPPDB").val();
@@ -461,5 +461,6 @@
 
 
 </script>
+{/literal}
 </body>
 </html> 
