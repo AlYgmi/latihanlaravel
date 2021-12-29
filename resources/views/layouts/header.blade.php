@@ -28,7 +28,7 @@
                       </div>
                       <div class="searchpropbody" id="ChoosePropinsi">
                         <ul class="listprop">
-                          @foreach($data_prov as $p)
+                          @foreach($sekolah as $p)
                           <li data-id="">{{ $p }}</li>
                           @endforeach
                         </ul>
@@ -43,7 +43,7 @@
                   
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Cari sekolah {{ $sekolah->jenjang }} disini..." name="search" value="search"/>
+                  <input type="text" class="form-control" placeholder="Cari sekolah disini..." name="search" value="search"/>
                 </div>
                 <div class="col-md-2">
                   <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>

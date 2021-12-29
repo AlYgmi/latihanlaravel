@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +37,4 @@ Route::get('/sekolah/cari','SearchController@cari');
 Route::get('/news','BeritaController@index');
 
 Route::get('/sekolah','SekolahController@detail');
+Route::get('/jenjang','JenjangController@index');

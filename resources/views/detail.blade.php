@@ -76,12 +76,11 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2800.8261610124573!2d107.54011166400105!3d-6.894629353954426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbitc%20baros!5e0!3m2!1sid!2sid!4v1637127970922!5m2!1sid!2sid" width="1295" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="container-fluid"></iframe>
   </div>
 </div>
-@foreach($data_detail as $a)
-@if($tlp != '')
+
 <a href="https://api.whatsapp.com/send?phone={$tlp}&text=Mohon%20Informasi%20Mengenai%20Penerimaan%20Siswa%20Baru." class="float" target="_blank">
-    <img src="/template/images/ppdb-op.jpg"/>
+    <img src="{{ asset('images/ppdb-op.jpg') }}"/>
 </a>
-@endif
+
 <!-- Page Title End -->
 <div class="listpgWraper wrapperDetail" style="padding-bottom: 0;margin-top: -135px;">
   <div class="container"> 
@@ -90,15 +89,15 @@
       <div class="jobinfo">
         <div class="row">
           <div class="col-md-8">
-            <div class="companylogo"><img src="{$logosekolah}" alt=""></div>
-            <h2>{{ $nama }}</h2>
+            <div class="companylogo"><img src="{{ $sekolah->gambar }}" alt=""></div>
+            <h2>{{ $sekolah->nama }}</h2>
             <div class="ptext">{{ $sekolah->jenjang }}</div>
-            <div class="salary">{{ $kota }}</div>
+            <div class="salary">{{ $sekolah->kota }}</div>
           </div>
           <div class="col-md-4">
             <div class="companyinfo">
               <div class="title"><a>Alamat</a></div>
-              <div class="ptext">{{ $alamat }}, {{ $kelurahan }}, {{ $kecamatan }}, {{ $kota }}, {{ $propinsi }}, {{ $kodepos }}</div>
+              <div class="ptext">{{ $sekolah->alamat }}, {{ $sekolah->kelurahan }}, {{ $sekolah->kecamatan }}, {{ $sekolah->kota }}, {{ $sekolah->propinsi }}, {{ $sekolah->kodepos }}</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -110,7 +109,7 @@
     
       <!-- Carousel Berita -->
       <div class="col-md-12">        
-            @if($jml_berita == '0')
+{{--            @if($jml_berita == '0') 	--}}
             <div class="listpgWraper listhome">
                 
                 <div class="blogWraper">
@@ -118,28 +117,28 @@
                       
                       <div class="carousel-inner">
                         @foreach($data_berita as $b)
-                          <div class="item">
+                        {{--  <div class="item">
                             <div class="row">
                                 <div class="thumbnail adjust1">
                                   
                                   <div class="col-md-6 col-sm-6 col-xs-12"> 
-                                      <img class="media-object img-responsive" src="{{ $b(['author','gambar','alias']) }}" alt=""> 
+                                      <img class="media-object img-responsive" src="{{ asset('images/news-1.jpg') }}" alt=""> 
                                   </div>
           
                                   <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="caption">
                                       <h4><a href="/berita/detail/">kajsdhkahecn</a></h4>
-                                      <div class="postmeta">Author : <span>{{ $author }}</span> Dari : <span>{{ $alias }}</span></div>
-                                     <p>{$b.isis}...</p>
+                                      <div class="postmeta">Author : <span>{{ $b->autor }}</span> Dari : <span>{{ $b->alias }}</span></div>
+                                     <p>lorem</p>
                                       <a href="/berita/detail/" class="readmore">Selengkapnya</a>
                                     </div>
                                   </div>
           
                                 </div>
                             </div>
-                          </div>
+                          </div> --}}
                         @endforeach
-                      </div>
+                   {{--   </div>
                       @if($data_berita == 1)
                       <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><i class="fa fa-chevron-left"></i> </a>
                       <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <i class="fa fa-chevron-right"></i> </a>
@@ -148,8 +147,8 @@
                     
                     <a href="/berita/" class="btn btn-primary my-float">Lihat Semua Berita</a>
                 </div>
-            </div>
-            @endif
+            </div> --}}
+            {{--@endif--}}
       </div>
       <!-- End of carousel berita -->
 
@@ -163,63 +162,62 @@
               <tr>
                 <th>Nama</th>
                 <td>:</td>
-                <td>{{ $nama }}</td>
+                <td>{{ $sekolah->nama }}</td>
               </tr>
               <tr>
                 <th>NPSN</th>
                 <td>:</td>
-                <td>{{ $npsn }}</td>
+                <td>{{ $sekolah->npsn }}</td>
               </tr>
               <tr>
                 <th>Alamat</th>
                 <td>:</td>
-                <td>{{ $alamat }}</td>
+                <td>{{ $sekolah->alamat }}</td>
               </tr>
               <tr>
                 <th>Kode Pos</th>
                 <td>:</td>
-                <td>{{ $kodepos }}</td>
+                <td>{{ $sekolah->kodepos }}</td>
               </tr>
               <tr>
                 <th>Desa/Kelurahan</th>
                 <td>:</td>
-                <td>{{ $kelurahan }}</td>
+                <td>{{ $sekolah->kelurahan }}</td>
               </tr>
               <tr>
                 <th>Kecamatan/Kota (LN)</th>
                 <td>:</td>
-                <td>{{ $kecamatan }}</td>
+                <td>{{ $sekolah->kecamatan }}</td>
               </tr>
               <tr>
                 <th>Kab.-Kota/Negara (LN)</th>
                 <td>:</td>
-                <td>{{ $kota }}</td>
+                <td>{{ $sekolah->kota }}</td>
               </tr>
               <tr>
                 <th>Propinsi/Luar Negeri (LN)</th>
                 <td>:</td>
-                <td>{{ $propinsi }}</td>
+                <td>{{ $sekolah->propinsi }}</td>
               </tr>
               <tr>
                 <th>Status Sekolah</th>
                 <td>:</td>
-                <td>{{ $status }}</td>
+                <td>{{ $sekolah->status }}</td>
               </tr>
               <tr>
                 <th>Waktu Penyelenggaraan</th>
                 <td>:</td>
-                <td>{{ $waktu }}</td>
+                <td>{{ $sekolah->waktu }}</td>
               </tr>
               <tr>
                 <th>Jenjang Pendidikan</th>
                 <td>:</td>
-                <td>{{ $jenjang }}</td>
+                <td>{{ $sekolah->jenjang }}</td>
               </tr>
             </table>
           </div>
         </div>
         <!-- Job Description end --> 
-        @if($statusppdb == 1)
         <div class="job-header">
           <div class="jobdetail">
             <h3>Cek PPDB</h3>
@@ -230,7 +228,6 @@
               <button type="button" id="PPDBSubmit" class="btn btn-primary btn-block">Cek</button>
           </div>
         </div>
-        @endif
         <!-- Job Detail start -->
         <!-- <div class="job-header">
           <div class="jobdetail">
@@ -281,19 +278,17 @@
         </div> -->
       </div>
       <div class="col-md-5">
-        @if($statusmember == 1 && $statusppdb == 1)
         <div class="job-header">
           <div class="jobdetail">
             <a href="/ppdb/" class="btn btn-lg btn-block btn-primary" style="border-radius: 0"><i class="fa fa-edit"></i> Pendaftaran Online</a>
           </div>
         </div>
-        @endif
         <!-- Job Description end --> 
         <div class="job-header">
           <div class="jobdetail">
             <h3>Kepala Sekolah</h3>
             <div class="kepsek">
-              <img src="balabala.jpeg">
+              <img src="{{ asset('images/news-3.jpg') }}">
               <h3>Adit</h3>
             </div>
           </div>
@@ -307,27 +302,27 @@
               <tr>
                 <th>Telepon</th>
                 <td>:</td>
-                <td>{{ $tlp }}</td>
+                <td>{{ $sekolah->telp }}</td>
               </tr>
               <tr>
                 <th>Fax</th>
                 <td>:</td>
-                <td>{{ $fax }}</td>
+                <td>{{ $sekolah->fax }}</td>
               </tr>
               <tr>
                 <th>Email</th>
                 <td>:</td>
-                <td>{{ $email }}</td>
+                <td>{{ $sekolah->email }}</td>
               </tr>
               <tr>
                 <th>Website</th>
                 <td>:</td>
-                <td>{{ $website }}</td>
+                <td>{{ $sekolah->website }}</td>
               </tr>
               <tr>
                 <th>Operator</th>
                 <td>:</td>
-                <td>{{ $operator }}</td>
+                <td>{{ $sekolah->operator }}</td>
               </tr>
             </table>
           </div>
@@ -338,8 +333,6 @@
     </div>
   </div>
 </div>
-@if($statusmember == 1)
-@if($jml_gallery == 0)
 <section class="section" style="padding-top: 0;margin-top: 100px;">
   <div class="container">
     <div class="titleTop">
@@ -349,15 +342,12 @@
       <div class="col-md-12">
         <div class="portfolioFilter">
           <a href="#" data-filter="*" class="current">All</a>
-        @foreach($data_kat_gallery as $k)
-          <a href="#">{{ $nama }}</a>
-        @endforeach
+          <a href="#">{{ $sekolah->nama }}</a>
         </div>
       </div>
     </div>
     <div class="row">
       <div id="gallery-content-center" class="gallerylist os-animation">
-      @foreach($data_gallery as $r)
       <div class="ct-photoGallery-item col-md-3">
         <a href="" title="" class="fancybox" data-fancybox-group="gallery">
           <div class="ct-galleryTitle">
@@ -365,15 +355,12 @@
           </div>
           <img src="" alt="">
         </a>
-        <h3 class="content-title">{{ $title }}</h3>
+        <h3 class="content-title">apa</h3>
       </div>
-      @endforeach
       </div>
     </div>
   </div>
 </section>
-@endif
-@if($jml_produkhome == '0')
 <!-- Featured Jobs start -->
 <section class="section">
   <div class="container"> 
@@ -386,33 +373,100 @@
     <div class="produkhome">
       <!--Featured Job start-->
       <ul class="jobslist row">
-        @foreach($data_produkhome as $p)
         <!--Job start-->
         <li class="col-md-6">
           <div class="jobint">
             <div class="row">
-              <div class="col-md-2 col-sm-2"><img src="" alt="" /></div>
+              <div class="col-md-2 col-sm-2"><img src="https://sekolahpedia.id/medias/produk/b5887.jpg" alt="Lisensi Office A1 365" /></div>
               <div class="col-md-7 col-sm-7">
-                <h4><a href="/produk/detail">apapun itu</a></h4>
-                <div class="company"><a href="/detail/{{ $npsn }}">{{ $nama }}</a></div>
-                <div class="jobloc"><label class="fulltime">{$p.namakategori}</label></div>
+                <h4><a href="/produk/detail/">Lisensi Office A1 365</a></h4>
+                {{-- {$p.id}/{$p.alias} --}}
+                <div class="company"><a href="/detail">SMK ANGKASA 1 MARGAHAYU</a></div>
+                <div class="jobloc"><label class="fulltime">Productivity</label></div>
               </div>
               <div class="col-md-3 col-sm-3">
-                <div class="price">Rp. 400.000</div>
-                <a href="/produk/detail" class="applybtn">Detail</a>
+                <div class="price">Rp. 50.000</div>
+                <a href="/produk/detail/" class="applybtn">Detail</a>
               </div>
             </div>
           </div>
         </li>
+        <li class="col-md-6">
+            <div class="jobint">
+              <div class="row">
+                <div class="col-md-2 col-sm-2"><img src="https://sekolahpedia.id/medias/produk/yvwkh.png" alt="Lisensi Mikrotik Level 4" /></div>
+                <div class="col-md-7 col-sm-7">
+                  <h4><a href="/produk/detail/">Lisensi Mikrotik Level 4</a></h4>
+                  {{-- {$p.id}/{$p.alias} --}}
+                  <div class="company"><a href="/detail">SMK ANGKASA 1 MARGAHAYU</a></div>
+                  <div class="jobloc"><label class="fulltime">Software</label></div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  <div class="price">Rp. 500.000</div>
+                  <a href="/produk/detail/" class="applybtn">Detail</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="col-md-6">
+            <div class="jobint">
+              <div class="row">
+                <div class="col-md-2 col-sm-2"><img src="https://sekolahpedia.id/medias/produk/h6yvz.png" alt="MIKROTIK RB 941-2ND Haplite" /></div>
+                <div class="col-md-7 col-sm-7">
+                  <h4><a href="/produk/detail/">MIKROTIK RB 941-2ND Haplite</a></h4>
+                  {{-- {$p.id}/{$p.alias} --}}
+                  <div class="company"><a href="/detail">SMK ANGKASA 1 MARGAHAYU</a></div>
+                  <div class="jobloc"><label class="fulltime">Routers</label></div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  <div class="price">Rp. 400.000</div>
+                  <a href="/produk/detail/" class="applybtn">Detail</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="col-md-6">
+            <div class="jobint">
+              <div class="row">
+                <div class="col-md-2 col-sm-2"><img src="https://sekolahpedia.id/medias/produk/c4pzz.png" alt="JASA SERVICE LAPTOP/PC dan HP" /></div>
+                <div class="col-md-7 col-sm-7">
+                  <h4><a href="/produk/detail/">JASA SERVICE LAPTOP/PC dan HP</a></h4>
+                  {{-- {$p.id}/{$p.alias} --}}
+                  <div class="company"><a href="/detail">SMK SWASTA YAPIM SIAK HULU</a></div>
+                  <div class="jobloc"><label class="fulltime">Service Product</label></div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  <div class="price">Rp. 50.000</div>
+                  <a href="/produk/detail/" class="applybtn">Detail</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="col-md-6">
+            <div class="jobint">
+              <div class="row">
+                <div class="col-md-2 col-sm-2"><img src="https://sekolahpedia.id/medias/produk/tbsp4.jpeg" alt="Ulat jerman" /></div>
+                <div class="col-md-7 col-sm-7">
+                  <h4><a href="/produk/detail/">Ulat Jerman</a></h4>
+                  {{-- {$p.id}/{$p.alias} --}}
+                  <div class="company"><a href="/detail">SMK SWASTA YAPIM SIAK HULU</a></div>
+                  <div class="jobloc"><label class="fulltime">Food</label></div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  <div class="price">Rp. 70.000</div>
+                  <a href="/produk/detail/" class="applybtn">Detail</a>
+                </div>
+              </div>
+            </div>
+          </li>
         <!--Job end--> 
-        @endforeach
       </ul>
     </div>
   </div>
 </section>
-@endif
-@endif
-@endforeach
+
+
+
 
 @include('layouts.footer')
 @include('layouts.limbs')
@@ -461,6 +515,5 @@
 
 
 </script>
-{/literal}
 </body>
 </html> 

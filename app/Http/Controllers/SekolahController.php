@@ -27,15 +27,23 @@ class SekolahController extends Controller
 	function npsn($npsn) 
 	{
 		$sekolah = Sekolah::find($npsn);
-		$data_berita = array(
-			array("author"=>"Adit", "alias" => "asjdkajsd", "gambar" => "kajsdkajksdjajksd", "sekolah" => "SMKN 12"),
-		);
-		$data_detail = array();
+		$data_berita = 
+			[
+				[
+					"autor"=>"adit",
+					"gambar"=>"ajkshdkadf",
+					"alias"=>"Al"
+				]
+			];
+		$data_detail =
+			[
+				"a"=>"asdasdasd"
+			];
 		$data_prov = array(
 			"jawa barat"
 		);
 
-		return view('detail',compact('sekolah', 'data_berita', 'data_prov','data_detail'));	
+		return view('detail',["sekolah"=>$sekolah, "data_berita"=>$data_berita, "data_prov"=>$data_prov,"data_detail"=>$data_detail]);	
 	}
 
 	function produk($id) {
